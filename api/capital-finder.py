@@ -6,7 +6,7 @@ class handler(BaseHTTPRequestHandler):
  
     def do_GET(self):
         """
-        
+        GET endpoint which expects a query parameter of a country name or country capital name. Responds with the capital if given a country and responds with the country if given a capital.
         """
 
         # extract queries from url and store in a dictionary
