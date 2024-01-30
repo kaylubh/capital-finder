@@ -28,10 +28,11 @@ class handler(BaseHTTPRequestHandler):
 
         if "capital" in query:
 
-            raw_country_response = requests.get(f"{api_url}/capital/{query['capital']}?fields=name")
+            capital_name = query['capital'].title()
+            raw_country_response = requests.get(f"{api_url}/capital/{capital_name}?fields=name")
             parsed_country_response = raw_country_response.json()
             country_response = parsed_country_response[0]["name"]["common"]
-            response = f"{query['capital']} is the capital of {country_response}."
+            response = f"{capital_name} is the capital of {country_response}."
 
         # send response
         self.send_response(200)
