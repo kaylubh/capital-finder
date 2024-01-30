@@ -12,15 +12,23 @@ class handler(BaseHTTPRequestHandler):
         # extract queries from url and store in a dictionary
         url_path = self.path
         url_components = parse.urlsplit(url_path)
-        queries = dict(parse.parse_qsl(url_components.query))
+        query = dict(parse.parse_qsl(url_components.query))
 
+        # get country or capital depending on query from REST Countries API 
         response = ""
 
-        if "country" in queries:
-            response += queries["country"]
-        elif "capital" in queries:
-            response += queries["capital"]
+        api_url = "https://restcountries.com/v3.1"
 
+        if "country" in query:
+
+            raw_capital_response = requests.get(f"{api_url}/name/{query['country']}?fields=capital")
+            capital_response = raw_capital_response[0]["capital"]
+            response = f"The capital of {query['country']} is {capital_response}."
+
+        if "capital" in query:
+            response += query["capital"]
+
+        # send response
         self.send_response(200)
         self.send_header('Content-type','text/plain')
         self.end_headers()
