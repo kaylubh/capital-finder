@@ -26,8 +26,8 @@ Replace `{capital_name}` with the name of a country's capital
 
 #### Tests
 
-- `https://capital-finder-seven-delta.vercel.app/api/capital-finder?country=canada`
+- [https://capital-finder-seven-delta.vercel.app/api/capital-finder?country=canada](https://capital-finder-seven-delta.vercel.app/api/capital-finder?country=canada)
   - Will render a page with "The capital of Canada is Ottawa."
 
-- `https://capital-finder-seven-delta.vercel.app/api/capital-finder?capital=stockholm`
+- [https://capital-finder-seven-delta.vercel.app/api/capital-finder?capital=stockholm](https://capital-finder-seven-delta.vercel.app/api/capital-finder?capital=stockholm)
   - Will render a page with "Stockholm is the capital of Sweden."
