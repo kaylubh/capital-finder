@@ -14,15 +14,15 @@ A browser and an internet connection
 
 Navigate to:
 
-`https://capital-finder-seven-delta.vercel.app/api/capital-finder?country={country_name}`
-
-Replace `{country_name}` with the name of a country
+>`https://capital-finder-seven-delta.vercel.app/api/capital-finder?country={country_name}`
+>
+>Replace `{country_name}` with the name of a country
 
 ***OR***
 
-`https://capital-finder-seven-delta.vercel.app/api/capital-finder?capital={capital_name}`
-
-Replace `{capital_name}` with the name of a country's capital
+>`https://capital-finder-seven-delta.vercel.app/api/capital-finder?capital={capital_name}`
+>
+>Replace `{capital_name}` with the name of a country's capital
 
 #### Tests
 
