@@ -23,7 +23,7 @@ class handler(BaseHTTPRequestHandler):
 
             raw_capital_response = requests.get(f"{api_url}/name/{query['country']}?fields=capital")
             parsed_capital_response = raw_capital_response.json()
-            capital_response = parsed_capital_response[0]["capital"]
+            capital_response = str(parsed_capital_response[0]["capital"])
             response = f"The capital of {query['country']} is {capital_response}."
 
         if "capital" in query:
